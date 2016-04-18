@@ -10,20 +10,198 @@ and open the template in the editor.
 
 body
 {
-    background-color: aquamarine;
+    background-color: #E8EAF6;
+    font-size: 12px;
 }
 #wrapper_login{
- width: 1024px;
- margin: 0px auto;
- text-align: center;
- font-family: Arial, Helvetica, sans-serif;
- padding-top: 100px;
+    width: 97%;
+    text-align: center;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#wrapper_register{
+    width: 97%;
+    text-align: center;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+input{
+    width:250px;
+    padding:10px;
+}
+
+.input_admin{
+    width:300px
+}
+
+.header  h1{
+    text-transform: uppercase;
+    font-size: 3em;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 2px;
+}
+.header{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    background-color: #1A237E;
+    padding: 15px;
+}
+.header_register  h1{
+    text-transform: uppercase;
+    font-size: 3em;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 2px;
+}
+.header_register{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    background-color: #1A237E;
+    padding: 0.5px;
 }
 #form_login{
-	background-color: #FAAC58;
-	margin: 0px auto;
-	height: 250px;
-	width: 350px;
-	padding: 10px;
-	border-radius: 10px;
+    border-radius: 10px;
+    background-color: #5C6BC0;
+    color: #E8EAF6;
+    margin: 0px auto;
+    width: 350px;
+    padding-bottom: 20px;
+}
+#form_register{
+    border-radius: 10px;
+    background-color: #5C6BC0;
+    color: #E8EAF6;
+    top: 15px;
+    width: 350px;
+    padding-bottom: 20px;
+}
+#wrapper_register #form_register h2 {
+   padding: 0px;
+   font-size: 1.8em;
+   font-family: 'Ubuntu', sans-serif;
+   letter-spacing: 5px;
+}
+h2{
+   padding: 18px;
+   font-size: 1.8em;
+   font-family: 'Ubuntu', sans-serif;
+   letter-spacing: 2px;
+}
+
+input[type="submit"]{
+    width: 130px;
+    margin-right: 5px;
+    background-color: #1A237E;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 45px;  
+}
+input[type="submit"]:hover{
+    background-color: #3949AB;
+}
+
+input[type="button"]{
+    margin-left: 5px;
+    width: 130px;
+    background-color: #1A237E;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+        margin-top: 45px;
+}
+input[type="button"]:hover{
+    background-color: #3949AB;
+}
+
+.box{
+    float: right;
+    margin: 30px;
+    padding:15px;
+    width: 300px;
+}
+.box_admin{
+    margin: 10% auto;
+    
+    padding:15px;
+    width: 300px;
+}
+.box a{
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+   
+    text-decoration: none;
+    color: white;
+    padding:10px;
+    border-radius: 5px;
+    background-color: #1A237E;
+    margin: 10px;
+}
+.box_admin a{
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+   
+    text-decoration: none;
+    color: white;
+    padding:10px;
+    border-radius: 5px;
+    background-color: #1A237E;
+    margin: 10px;
+}
+.box a:hover{
+    background-color: #3949AB;
+}
+.box_admin a:hover{
+    background-color: #3949AB;
+}
+/* COSIKAS de La TABlah*/
+.content{
+    width:100%;
+    margin: 10% auto;
+    
+    
+}
+table{
+    width: 80%;
+    margin: 0 auto;
+    border:1px solid grey;
+}
+table, td, tr{
+    border:1px solid grey;
+}
+table th{
+    background-color: #3F51B5;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+}
+table td{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+
+}
+table tr:nth-child(odd){
+    background-color: #C5CAE9;
+}
+table tr:nth-child(even){
+    background-color: #EEEEEE;
 }

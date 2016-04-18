@@ -5,16 +5,19 @@
  */
 package model;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 /**
  *
  * @author Carlos
  */
-public class Administrador {
+public class Administrador extends Conexion{
     private int admin_id;
     private String admin_user;
     private String admin_pass;
     private String admin_mail;
-    
     //CONSTRUCTORES
         public Administrador() {
         }
@@ -23,7 +26,6 @@ public class Administrador {
             this.admin_pass = admin_pass;
             this.admin_mail = admin_mail;
         }
-    
     //GETTERS
         public int getAdmin_id() {
             return admin_id;
@@ -40,7 +42,6 @@ public class Administrador {
         public String getAdmin_mail() {
             return admin_mail;
         }
-    
     //SETTERS
         public void setAdmin_id(int admin_id) {
             this.admin_id = admin_id;
@@ -57,8 +58,28 @@ public class Administrador {
         public void setAdmin_mail(String admin_mail) {
             this.admin_mail = admin_mail;
         }
-        
     
+        
+    //METODOS
+        //VERIFICACION DEL LOGIN
+        public boolean AutenticacionAdmin (String user, String pass) throws SQLException{
+            Statement st = con.createStatement();
+            String Consulta = "SELECT * FROM tbl_admin";
+            ResultSet rs = st.executeQuery(Consulta);
+            while(rs.next()){
+                Administrador admin_1 = new Administrador ();
+                //ASIGNAR PROPIEDADES AL OBJETO DEL RESULTADO DE LA CONSULTA A LA BDD.
+                //EL USER
+                admin_1.setAdmin_user(rs.getString("admin_user"));
+                //EL PASSWORD
+                admin_1.setAdmin_pass(rs.getString("admin_pass"));
+
+                //COMPARATIVA DE QUE SEAN IGUALES QUE LO QUE EL USUARIO HA INTRODUCIDO.
+                if(user.equals(admin_1.getAdmin_user()) && pass.equals(admin_1.getAdmin_pass()))
+                    return true;
+            }
+            return false;
+        }
     
     
     

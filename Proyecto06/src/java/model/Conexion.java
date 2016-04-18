@@ -33,8 +33,9 @@ public class Conexion {
         }
     }
     //PRUEBA DE LA CONEXION DE BASE DE DATOS
+    /*
     public static void main (String[] args){
      Conexion conectar = new Conexion();
     }
-    
+    */
 }
